@@ -71,5 +71,5 @@ function game() {
 	return score;
 }
 
-game();
+// game();
 console.log("Game is Over");

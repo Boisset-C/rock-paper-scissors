@@ -26,6 +26,14 @@ body {
 	border-radius: 8px;
 }
 
+#key div {
+	border: orange 6px solid;
+	display: flex;
+	justify-content: center;
+	background-color: pink;
+	margin: 4pxrem;
+}
+
 #key img {
 	height: 40px;
 	width: auto;

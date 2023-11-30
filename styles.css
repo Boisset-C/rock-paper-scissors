@@ -39,12 +39,12 @@ body {
 	background-color: green;
 }
 
-#screen-container .player-score {
+#screen-container #player-score {
 	flex: 1;
 	background-color: aqua;
 }
 
-#screen-container .computer-score {
+#screen-container #computer-score {
 	flex: 1;
 	background-color: aqua;
 }
@@ -54,7 +54,7 @@ body {
 	background-color: green;
 	border-radius: 8px;
 	height: auto;
-	width: 800px;
+	width: 700px;
 	flex: 4;
 	margin: 2rem;
 }

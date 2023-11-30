@@ -1,6 +1,28 @@
 //Game Score
 var score = { human: 0, computer: 0 };
 
+//----- MIGHT HAVE TO FIX EXTRA P TAGS BEING CREATED ------
+//Add player score to game
+const playerScoreContainer = document.querySelector("#player-score");
+let playerScore = document.createElement("p");
+
+playerScore.classList.add("current-player-score");
+playerScore.textContent = `Player Score: ${score.human}`;
+playerScoreContainer.appendChild(playerScore);
+
+// // Update the score text
+// playerScore.textContent = `Player Score: ${score.human}`;
+//------- MIGHT HAVE TO FIX EXTRA P TAGS BEING CREATED -------
+
+//----- MIGHT HAVE TO FIX EXTRA P TAGS BEING CREATED ------
+//Add computer score to game
+const computerScoreContainer = document.querySelector("#computer-score");
+const computerScore = document.createElement("p");
+computerScore.classList.add("current-player-score");
+computerScore.textContent = `Computer Score: ${score.computer}`;
+computerScoreContainer.appendChild(computerScore);
+//----- MIGHT HAVE TO FIX EXTRA P TAGS BEING CREATED ------
+
 //Gets computer choice randomly will select between "rock", "paper", or "scissors"
 function getComputerChoice() {
 	let options = ["rock", "paper", "scissors"];
@@ -11,14 +33,25 @@ function getComputerChoice() {
 }
 
 //Gets player decision
-function getPlayerSelection(decision) {
-	if (decision.toLowerCase() === "rock" || decision.toLowerCase() === "paper" || decision.toLowerCase() === "scissors") {
+function getPlayerChoice(decision) {
+	if (decision.toLowerCase() === "wizard" || decision.toLowerCase() === "ranger" || decision.toLowerCase() === "warrior") {
+		console.log(decision.toLowerCase());
 		return decision.toLowerCase();
 	} else {
 		alert("Invalid choice, please pick between rock, paper or scissors");
 		return null;
 	}
 }
+
+const wizard = document.getElementById("wizardButton").addEventListener("click", function () {
+	const playerChoice = getPlayerChoice("wizard");
+});
+const ranger = document.getElementById("rangerButton").addEventListener("click", function () {
+	const playerChoice = getPlayerChoice("ranger");
+});
+const warrior = document.getElementById("warriorButton").addEventListener("click", function () {
+	const playerChoice = getPlayerChoice("warrior");
+});
 
 //To play a single round of game
 function singleRoundOfGame(player, computer) {
@@ -52,11 +85,11 @@ function game() {
 		//Gets computer decision
 		let computerPlayed = getComputerChoice();
 		console.log(`computer choice: ${computerPlayed}`);
-		//Gets player choice selection between "rock", "paper", or "scissors"
+		//Gets player choice Choice between "rock", "paper", or "scissors"
 		let playerDecision = prompt("Will it be rock, paper or scissors?");
 		console.log(`player input: ${playerDecision}`);
 		//Gets player decision
-		let playerPlayed = getPlayerSelection(playerDecision);
+		let playerPlayed = getPlayerChoice(playerDecision);
 		console.log(`player choice: ${playerPlayed}`);
 
 		//Round played
@@ -71,4 +104,4 @@ function game() {
 }
 
 // game();
-console.log("Game is Over");
+// console.log("Game is Over");

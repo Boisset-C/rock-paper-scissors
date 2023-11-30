@@ -43,20 +43,19 @@ body {
 
 #controls-container {
 	display: flex;
-	flex-direction: column;
 	align-self: center;
 	background-color: greenyellow;
 }
 
-#controls-container div {
-	display: flex;
-	justify-content: center;
-	align-self: center;
-	background-color: greenyellow;
+#controls-container button {
+	height: 50px;
+	width: auto;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 #controls-container img {
-	height: 50px;
+	height: 100%;
 	width: auto;
 	margin-left: 1rem;
 	margin-right: 1rem;

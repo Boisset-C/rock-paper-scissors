@@ -63,7 +63,6 @@ function game() {
 		let verdict = singleRoundOfGame(playerPlayed, computerPlayed);
 		console.log(`Round Results: ${verdict}`);
 
-		//keeps score
 		keepScore(verdict);
 
 		console.log(score);

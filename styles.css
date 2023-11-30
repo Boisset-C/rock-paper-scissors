@@ -2,12 +2,18 @@
 	box-sizing: border-box;
 }
 
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 0;
-	padding: 0;
 	background-color: black;
 }
 
@@ -27,12 +33,29 @@ body {
 	margin-right: 1rem;
 }
 
+#screen-container {
+	display: flex;
+	align-self: center;
+	background-color: green;
+}
+
+#screen-container .player-score {
+	flex: 1;
+	background-color: aqua;
+}
+
+#screen-container .computer-score {
+	flex: 1;
+	background-color: aqua;
+}
+
 #screen {
 	align-self: center;
 	background-color: green;
 	border-radius: 8px;
 	height: auto;
-	width: 500px;
+	width: 800px;
+	flex: 4;
 	margin: 2rem;
 }
 

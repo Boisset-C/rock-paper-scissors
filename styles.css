@@ -4,34 +4,34 @@
 
 html,
 body {
-	height: 100%;
+	height: 100vh;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	background-color: lightgray;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	background-color: black;
 }
 
 #key {
+	border: black 1px solid;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	align-self: center;
-	background-color: red;
 	border-radius: 8px;
+	margin-top: 1rem;
 }
 
 #key div {
-	border: orange 6px solid;
 	display: flex;
+	align-items: center;
 	justify-content: center;
-	background-color: pink;
-	margin: 4pxrem;
+
+	margin: 4px;
 }
 
 #key img {
@@ -44,30 +44,42 @@ body {
 #screen-container {
 	display: flex;
 	align-self: center;
-	background-color: green;
 }
 
 #screen-container #player-score {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
 	flex: 1;
-	background-color: aqua;
+	height: 25%;
+	border: black 1px solid;
+	border-radius: 8px;
 }
 
 #screen-container #computer-score {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
 	flex: 1;
-	background-color: aqua;
+	height: 25%;
+	border: black 1px solid;
+	border-radius: 8px;
 }
 
 #screen {
-	align-self: center;
-	background-color: green;
+	border: black 1px solid;
+	box-shadow: 5px 5px 5px black;
 	border-radius: 8px;
 	height: auto;
-	width: 700px;
+	width: 620px;
 	flex: 4;
-	margin: 2rem;
+	margin: 0.75rem;
 }
 
 #screen img {
+	border-radius: 8px;
 	height: 100%;
 	width: 100%;
 }
@@ -75,10 +87,12 @@ body {
 #controls-container {
 	display: flex;
 	align-self: center;
-	background-color: greenyellow;
 }
 
 #controls-container button {
+	border: black 1px solid;
+	box-shadow: 5px 5px 5px black;
+	border-radius: 8px;
 	height: 50px;
 	width: auto;
 	margin-left: 1rem;
@@ -86,8 +100,21 @@ body {
 }
 
 #controls-container img {
+	background-color: slategray;
 	height: 100%;
 	width: auto;
 	margin-left: 1rem;
 	margin-right: 1rem;
+}
+
+#game-over-modal {
+	position: absolute;
+	display: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: aqua;
+	border-radius: 8px;
+	height: 340px;
+	width: 600px;
 }

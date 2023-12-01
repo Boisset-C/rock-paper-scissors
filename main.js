@@ -38,25 +38,32 @@ function getPlayerChoice(decision) {
 	}
 }
 
+//if player picks wizard
 const wizard = document.getElementById("wizardButton").addEventListener("click", function () {
 	const playerChoice = getPlayerChoice("wizard");
 	const computerChoice = getComputerChoice();
 	const roundResult = singleRoundOfGame(playerChoice, computerChoice);
 	console.log(score);
 	keepScore(roundResult);
-	console.log(score);
+	gameOver();
 });
+
+//if player picks ranger
 const ranger = document.getElementById("rangerButton").addEventListener("click", function () {
 	const playerChoice = getPlayerChoice("ranger");
 	const computerChoice = getComputerChoice();
 	const roundResult = singleRoundOfGame(playerChoice, computerChoice);
 	keepScore(roundResult);
+	gameOver();
 });
+
+//if player picks ranger
 const warrior = document.getElementById("warriorButton").addEventListener("click", function () {
 	const playerChoice = getPlayerChoice("warrior");
 	const computerChoice = getComputerChoice();
 	const roundResult = singleRoundOfGame(playerChoice, computerChoice);
-	keepScore(roundResult);
+	const roundVerdict = keepScore(roundResult);
+	gameOver();
 });
 
 //To play a single round of game
@@ -64,12 +71,15 @@ function singleRoundOfGame(player, computer) {
 	let verdict;
 	if (player === computer) {
 		verdict = "It's a tie";
+		console.log(verdict);
 		return verdict;
 	} else if ((player === "wizard" && computer === "warrior") || (player === "ranger" && computer === "wizard") || (player === "warrior" && computer === "ranger")) {
 		verdict = "You win!";
+		console.log(verdict);
 		return verdict;
 	} else {
 		verdict = "You lose this round!";
+		console.log(verdict);
 		return verdict;
 	}
 }
@@ -85,33 +95,27 @@ function keepScore(roundResults) {
 	} else {
 		score.computer += 1;
 		// Update the score text
-		computerScore.textContent = `Computer Score: ${score.human}`;
+		computerScore.textContent = `Computer Score: ${score.computer}`;
 	}
 }
 
 //Create A game function for the game loop.
-function game() {
-	while (score.computer < 5 && score.human < 5) {
-		//Gets computer decision
-		let computerPlayed = getComputerChoice();
-		console.log(`computer choice: ${computerPlayed}`);
-		//Gets player choice Choice between "rock", "paper", or "scissors"
-		let playerDecision = prompt("Will it be rock, paper or scissors?");
-		console.log(`player input: ${playerDecision}`);
-		//Gets player decision
-		let playerPlayed = getPlayerChoice(playerDecision);
-		console.log(`player choice: ${playerPlayed}`);
-
-		//Round played
-		let verdict = singleRoundOfGame(playerPlayed, computerPlayed);
-		console.log(`Round Results: ${verdict}`);
-
-		keepScore(verdict);
-
-		console.log(score);
+function gameOver() {
+	if (score.computer >= 5) {
+		console.log("Computer WON");
+		score.human = 0;
+		score.computer = 0;
+		playerScore.textContent = `Player Score: ${score.human}`;
+		computerScore.textContent = `Computer Score: ${score.human}`;
+	} else if (score.human >= 5) {
+		console.log("Human WON");
+		score.human = 0;
+		score.computer = 0;
+		playerScore.textContent = `Player Score: ${score.human}`;
+		computerScore.textContent = `Computer Score: ${score.human}`;
 	}
+
 	return score;
 }
 
-// game();
-// console.log("Game is Over");
+console.log("Game is Over");

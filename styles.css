@@ -9,6 +9,7 @@ body {
 	padding: 0;
 	overflow: hidden;
 	background-color: lightgray;
+	background-image: url("./assets/bg.png");
 }
 
 body {
@@ -107,7 +108,7 @@ body {
 	margin-right: 1rem;
 }
 
-#game-over-modal {
+.modal {
 	position: absolute;
 	display: none;
 	top: 50%;

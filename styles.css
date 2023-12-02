@@ -7,14 +7,14 @@ body {
 	height: 100vh;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
-	background-color: lightgray;
-	background-image: url("./assets/bg.png");
 }
 
 body {
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	background-image: url("./assets/bg2.png");
+	background-position: center center;
 }
 
 #key {
@@ -25,13 +25,16 @@ body {
 	align-self: center;
 	border-radius: 8px;
 	margin-top: 1rem;
+	background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+	color: #ffffff; /* White text for contrast */
+	padding: 5px; /* Spacing around text */
+	border-radius: 5px; /* Rounded corners */
 }
 
 #key div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	margin: 4px;
 }
 
@@ -56,6 +59,10 @@ body {
 	height: 25%;
 	border: black 1px solid;
 	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+	color: #ffffff; /* White text for contrast */
+	padding: 5px; /* Spacing around text */
+	border-radius: 5px; /* Rounded corners */
 }
 
 #screen-container #computer-score {
@@ -67,6 +74,10 @@ body {
 	height: 25%;
 	border: black 1px solid;
 	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+	color: #ffffff; /* White text for contrast */
+	padding: 5px; /* Spacing around text */
+	border-radius: 5px; /* Rounded corners */
 }
 
 #screen {

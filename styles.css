@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	font-family: "MedievalSharp", cursive; /* Assuming you use Google Fonts */
 }
 
 html,
@@ -15,6 +16,7 @@ body {
 	flex-direction: column;
 	background-image: url("./assets/bg2.png");
 	background-position: center center;
+	background-color: #b9f2ff;
 }
 
 #key {

@@ -28,7 +28,8 @@
 		<div id="screen-container">
 			<div id="player-score"></div>
 			<div id="screen">
-				<img src="./assets/arena.png" alt="A wizard" />
+				<canvas id="scene"></canvas>
+				<img id="arena" src="./assets/arena.png" alt="A wizard" />
 			</div>
 			<div id="computer-score"></div>
 		</div>
@@ -44,12 +45,14 @@
 				<img src="./assets/warrior.jpg" alt="A Warrior" />
 			</button>
 		</div>
-		<script src="./main.js"></script>
 
 		<!--Welcome Modal-->
 		<div class="modal"></div>
 
 		<!--Game Over Modal-->
 		<div class="modal"></div>
+
+		<script src="./main.js"></script>
+		<script src="./animations.js"></script>
 	</body>
 </html>

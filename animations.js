@@ -2,7 +2,7 @@ const scene = document.getElementById("scene");
 const ctx = scene.getContext("2d");
 const arena = document.getElementById("arena");
 const screen = document.getElementById("screen");
-const fps = 6;
+const fps = 7;
 const frameDelay = 1000 / fps;
 
 let lastFrameTime = 0;
@@ -58,8 +58,8 @@ function updateScene(timestamp) {
 		0,
 		idleWizardWidth,
 		idleWizardHeight,
-		0,
-		0,
+		-18,
+		74,
 		idleWizardWidth,
 		idleWizardHeight
 	);
